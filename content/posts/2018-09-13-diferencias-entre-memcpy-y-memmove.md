@@ -25,7 +25,7 @@ Vamos a ver el ejemplo siguiente en el que se ve el fallo. Imaginemos que se qui
 desde la posición 3 del buffer a la posición 5 del buffer. Cuando vayamos a copiar la posición 5,
 esta habrá sido sobreescrita y se copiará un valor erróneo.
 
-![memcpy overlapping error](http://www.equestionanswers.com/c/images/memcpy_upper_overlapping.gif)
+![memcpy overlapping error](/images/memcpy_upper_overlapping.gif)
 
 *Fuente: equestionanswers.com*
 
