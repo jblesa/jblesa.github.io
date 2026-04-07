@@ -1,0 +1,4 @@
+baseURL = 'https://jblesa.github.io/'
+languageCode = 'en-us'
+title = "Jblesa's Blog"
+theme = 'ananke'
