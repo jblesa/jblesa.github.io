@@ -101,6 +101,23 @@
       </ul>
     </section>
 
+    <!-- ── Blog ── -->
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ if $posts }}
+    <section>
+      <h2>Blog</h2>
+      <ul class="post-list">
+        {{ range $posts }}
+        <li class="post-list-item">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+      <p class="section-more"><a href="/posts/">All posts →</a></p>
+    </section>
+    {{ end }}
+
     <!-- ── Projects ── -->
     <section>
       <h2>Projects</h2>

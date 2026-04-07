@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog · Javier Blesa</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="container">
+
+    <nav class="breadcrumb">
+      <a href="/">Javier Blesa</a>
+    </nav>
+
+    <section>
+      <h2>Blog</h2>
+      <ul class="post-list">
+        {{ range .Pages }}
+        <li class="post-list-item">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
