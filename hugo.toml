@@ -1,4 +1,120 @@
 baseURL = 'https://jblesa.github.io/'
 languageCode = 'en-us'
 title = "Jblesa's Blog"
-theme = 'ananke'
+theme = 'LoveIt'
+
+# Required by LoveIt for search
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  version = "0.3.X"
+  description = "Software developer and PhD in Telecommunications. Embedded systems and UAV autopilots."
+  keywords = ["embedded", "C++", "UAV", "programming", "Madrid"]
+  defaultTheme = "auto"
+  gitRepo = "https://github.com/jblesa/jblesa.github.io"
+  fingerprint = ""
+  dateFormat = "2006-01-02"
+
+  [params.author]
+    name = "Javier Blesa"
+    email = ""
+    link = "https://jblesa.github.io"
+
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      name = "Jblesa's Blog"
+      typeit = false
+
+  [params.footer]
+    enable = true
+    hugo = false
+    copyright = true
+    author = true
+    since = 2018
+
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = false
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    GitHub = "jblesa"
+    Linkedin = "jblesa"
+    Twitter = "jblesa"
+
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = false
+    lightgallery = false
+    ruby = false
+    fraction = false
+    fontawesome = true
+    linkToMarkdown = false
+    rssFullText = false
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+    [params.page.share]
+      enable = false
+
+  [params.search]
+    enable = true
+    type = "fuse"
+    contentLength = 4000
+    placeholder = ""
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+    [params.search.fuse]
+      isCaseSensitive = false
+      minMatchCharLength = 2
+      findAllMatches = false
+      location = 0
+      threshold = 0.3
+      distance = 100
+      ignoreLocation = false
+      useExtendedSearch = false
+      ignoreFieldNorm = false
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
