@@ -2,7 +2,6 @@
 title: "Release cadidates branches strategy"
 date: 2026-04-08T10:00:00+02:00
 lastmod: 2026-04-08T10:00:00+02:00
-draft: true
 
 # Categorization
 tags: ["git", "release candidate", "branch", "strategy"]
