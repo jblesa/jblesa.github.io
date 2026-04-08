@@ -118,3 +118,15 @@ theme = 'LoveIt'
       typographer = true
     [markup.goldmark.renderer]
       unsafe = true
+
+      defaultContentLanguage = "es"      # or "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.es]
+    languageName = "Español"
+    weight = 1
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
