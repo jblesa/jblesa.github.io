@@ -1,5 +1,5 @@
 ---
-title: "Release cadidates branches strategy"
+title: "Estrategia de ramas para versiones candidatas"
 date: 2026-04-08T10:00:00+02:00
 lastmod: 2026-04-08T10:00:00+02:00
 
@@ -8,10 +8,10 @@ tags: ["git", "release candidate", "branch", "strategy"]
 categories: ["programming"]
 
 # SEO & social
-description: "Advantages and hhow to apply a RC branches strategy."
+description: "Cómo las ramas de versión candidata ayudan a hacer la validación más predecible y protegen el flujo principal de desarrollo."
 
 # Display
-author: "Javi"
+author: "Javier Blesa"
 cover:
   image: "images/cover.jpg"
   alt: "Cover description"
