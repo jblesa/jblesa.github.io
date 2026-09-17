@@ -1,143 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.Language.Lang | default "en" }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javier Blesa</title>
-  <meta name="description" content="Software developer and PhD in Telecommunications. Director &amp; Head of Software and IT at UAV Navigation.">
-  <link rel="stylesheet" href="/css/main.css">
+  <meta name="color-scheme" content="light">
+  <title>Javier Blesa — Embedded Software &amp; UAS</title>
+  <meta name="description" content="Software Engineering Director specialising in embedded systems, UAVs, software architecture and engineering leadership.">
+  <meta property="og:title" content="Javier Blesa — Embedded Software &amp; UAS">
+  <meta property="og:description" content="Building and leading reliable software for autonomous and safety-critical systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 </head>
 <body>
-  <div class="container">
-
-    <!-- ── Header ── -->
-    <header>
-      <div class="profile">
-        <img
-          class="avatar"
-          src="https://avatars.githubusercontent.com/u/4866029?v=4"
-          alt="Javier Blesa">
-        <div class="profile-info">
-          <h1>Javier Blesa</h1>
-          <p class="tagline">Software developer · PhD in Telecommunications · Madrid</p>
-          <nav class="social" aria-label="Social links">
-
-            <!-- GitHub -->
-            <a href="https://github.com/jblesa" target="_blank" rel="noopener">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89
-                -3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1
-                2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82
-                2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01
-                8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-              GitHub
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/jblesa" target="_blank" rel="noopener">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16
-                .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943
-                12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248
-                -1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359
-                c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25
-                c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4
-                c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-              LinkedIn
-            </a>
-
-            <!-- RSS / Blog -->
-            <a href="/posts/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
-              Blog
-            </a>
-
-            <!-- Twitter / X -->
-            <a href="https://twitter.com/jblesa" target="_blank" rel="noopener">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937
-                l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36
-                L4.323 2.145H2.865l8.875 11.633Z"/></svg>
-              Twitter
-            </a>
-
-          </nav>
-        </div>
-      </div>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Javier Blesa, home">
+        <span class="brand-mark" aria-hidden="true">JB</span>
+        <span>Javier Blesa</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#expertise">Expertise</a>
+        <a href="#articles">Articles</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+      </nav>
     </header>
 
-    <!-- ── About ── -->
-    <section class="about">
-      <h2>About</h2>
-      <p>
-        I am a software developer and embedded systems engineer based in Madrid, with a PhD in
-        Telecommunications. I have over 15 years of experience designing software for UAV autopilots,
-        sensor networks, and safety-critical embedded platforms.
-      </p>
-      <p>
-        I currently serve as Director &amp; Head of Software and IT at
-        <a href="https://www.uavnavigation.com" target="_blank" rel="noopener">UAV Navigation</a>
-        (Grupo Oesía), where I lead the engineering teams responsible for flight control systems and
-        ground software.
-      </p>
-    </section>
-
-    <!-- ── Experience ── -->
-    <section>
-      <h2>Experience</h2>
-      <ul class="timeline">
-        <li>
-          <span class="tl-date">2024 – present</span>
-          <div class="tl-body">
-            <strong>Director &amp; Head of Software and IT</strong>
-            <span>UAV Navigation - Grupo Oesía</span>
-            <p>Leading software and IT engineering for UAV autopilot systems. Responsible for
-               embedded flight control software, sensor fusion, ground control stations, and
-               team management.</p>
-               <p><a href="https://www.notion.so/jblesa/d159967c38ff48c2a5733dc84aa214ec?v=a5c31964f8eb4c5a9584eb4161391994" rel="nofollow"><strong>Works performed in UAV Navigation</strong></a></p>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Embedded software · Autonomous systems</p>
+          <h1 id="hero-title">Building reliable software for systems that fly.</h1>
+          <p class="hero-intro">
+            I am a Software Engineering Director with more than 15 years of experience in
+            embedded systems, UAV autopilots and engineering leadership.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#articles">Read my engineering notes</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/jblesa" target="_blank" rel="noopener">Connect on LinkedIn</a>
           </div>
-        </li>
-        <li>
-          <span class="tl-date">2018 – 2024</span>
-          <div class="tl-body">
-            <strong>SW Engineer</strong>
-            <span>UAV Navigation - Grupo Oesía</span>
-            <p>Specification, Design, implementation and testing of new feature for UAVs. Payload integration. Repository and CI maintenance. Client support.</p>
+        </div>
+        <aside class="profile-card" aria-label="Professional profile">
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/4866029?v=4" alt="Portrait of Javier Blesa">
+          <div>
+            <p class="profile-name">Javier Blesa</p>
+            <p class="profile-role">Software Engineering Director</p>
+            <p class="profile-location">PhD in Telecommunications · Madrid</p>
           </div>
-        </li>
-        <li>
-          <span class="tl-date">2008 - 2018</span>
-          <div class="tl-body">
-            <strong>PhD &amp; Senior R&D engineer at B105 Electronic Systems Lab</strong>
-            <span>Universidad Politécnica de Madrid</span>
-            <p>Areas: road safety and security, Vehicular networks, biulding and construction.</p>
-            <p>Technical skills: Advance C and C++ porgramming, embedded systems, wireless sensor networks, real time, microcontrollers, hardware desing, Linux and Windows environments, bash scripting, Android, Matlab.</p>
-            <p>Tools: MplabX, OpenSTM32, Cube, Android Studio, Matlab, Altium Designer. </p>
-            <p>Drafting, development and management national and European projects.</p>
-            <p>Project mangaement tools and techniques: Scrum, Kanban, ActiveCollab, Git, SVN, Trello, Todoist.</p>
-            <p>Teaching in electronics subjects, publications in JCR and international congress.</p>
-            <p><a href="https://www.notion.so/jblesa/e7d86a4f40334939bd87ae0585100eb3?v=2fdf52c474c9430eaa331e64ca74f69a" rel="nofollow"><strong>Works performed in B105 ESL</strong></a></p>
+          <div class="profile-links">
+            <a href="https://github.com/jblesa" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/jblesa" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
-        </li>
-      </ul>
-    </section>
+        </aside>
+      </section>
 
-    <!-- ── Blog ── -->
-    {{ $posts := where .Site.RegularPages "Section" "posts" }}
-    {{ if $posts }}
-    <section>
-      <h2>Blog</h2>
-      <ul class="post-list">
-        {{ range $posts }}
-        <li class="post-list-item">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
-      <p class="section-more"><a href="/posts/">All posts →</a></p>
-    </section>
-    {{ end }}
+      <section id="expertise" class="content-section" aria-labelledby="expertise-title">
+        <div class="section-heading">
+          <p class="section-index">01</p>
+          <div>
+            <p class="section-kicker">Areas of expertise</p>
+            <h2 id="expertise-title">Where software meets the real world.</h2>
+          </div>
+        </div>
+        <div class="expertise-grid">
+          <article class="expertise-card">
+            <span class="card-number">01</span>
+            <h3>Embedded &amp; Real-Time Systems</h3>
+            <p>Deterministic C/C++ software, RTOS architecture, memory integrity and hardware interfaces.</p>
+          </article>
+          <article class="expertise-card">
+            <span class="card-number">02</span>
+            <h3>UAV &amp; Autonomous Systems</h3>
+            <p>Autopilots, flight-control software, sensor fusion, payloads and ground-control systems.</p>
+          </article>
+          <article class="expertise-card">
+            <span class="card-number">03</span>
+            <h3>Architecture &amp; Quality</h3>
+            <p>Long-lived product architecture, CI, verification strategies and dependable releases.</p>
+          </article>
+          <article class="expertise-card">
+            <span class="card-number">04</span>
+            <h3>Engineering Leadership</h3>
+            <p>Leading multidisciplinary teams and turning technical constraints into product decisions.</p>
+          </article>
+        </div>
+      </section>
 
+      {{ $posts := where .Site.RegularPages "Section" "posts" }}
+      {{ if $posts }}
+      <section id="articles" class="content-section" aria-labelledby="articles-title">
+        <div class="section-heading section-heading-with-link">
+          <div class="section-title-group">
+            <p class="section-index">02</p>
+            <div>
+              <p class="section-kicker">Engineering notes</p>
+              <h2 id="articles-title">Ideas from building dependable software.</h2>
+            </div>
+          </div>
+          <a class="text-link" href="{{ "posts/" | relLangURL }}">View all articles <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="article-grid">
+          {{ range first 3 (sort $posts "Date" "desc") }}
+          <article class="article-card">
+            <div class="article-meta">
+              {{ with index .Params.categories 0 }}<span>{{ . }}</span>{{ end }}
+              <span>{{ .ReadingTime }} min read</span>
+            </div>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Description }}<p>{{ . }}</p>{{ else }}<p>{{ .Summary | plainify | truncate 155 }}</p>{{ end }}
+            <div class="article-footer">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+              <a href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">Read <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+      <section id="experience" class="content-section" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="section-index">03</p>
+          <div>
+            <p class="section-kicker">Selected experience</p>
+            <h2 id="experience-title">From embedded engineering to technical leadership.</h2>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li>
+            <div class="timeline-period">2024 — Present</div>
+            <div class="timeline-content">
+              <h3>Director &amp; Head of Software and IT</h3>
+              <p class="timeline-company">UAV Navigation — Grupo Oesía</p>
+              <p>Leading the teams responsible for embedded flight-control software, sensor fusion, ground-control systems and corporate IT.</p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-period">2018 — 2024</div>
+            <div class="timeline-content">
+              <h3>Software Engineer</h3>
+              <p class="timeline-company">UAV Navigation — Grupo Oesía</p>
+              <p>Designed, implemented and verified UAV features and payload integrations, while supporting CI, releases and customer deployments.</p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-period">2008 — 2018</div>
+            <div class="timeline-content">
+              <h3>PhD &amp; Senior R&amp;D Engineer</h3>
+              <p class="timeline-company">B105 Electronic Systems Lab · Universidad Politécnica de Madrid</p>
+              <p>Developed embedded and connected systems for European and national R&amp;D projects, combining engineering, research and teaching.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="about" class="content-section about-section" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="section-index">04</p>
+          <div>
+            <p class="section-kicker">About</p>
+            <h2 id="about-title">Engineering with context.</h2>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="about-lead">I work at the intersection of embedded software, autonomous systems and engineering management.</p>
+          <div>
+            <p>My career began close to the hardware: microcontrollers, real-time constraints and communications. Today, I lead software teams building products where reliability, maintainability and sound technical judgement matter.</p>
+            <p>I use this site to share practical lessons about embedded development, UAV software, architecture, quality and the realities of leading technical teams.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-panel" aria-labelledby="contact-title">
+        <div>
+          <p class="section-kicker">Let’s connect</p>
+          <h2 id="contact-title">Interested in embedded systems, UAS or engineering leadership?</h2>
+        </div>
+        <a class="button button-light" href="https://www.linkedin.com/in/jblesa" target="_blank" rel="noopener">Find me on LinkedIn <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© {{ now.Year }} Javier Blesa</p>
+      <p>Embedded software · UAS · Engineering leadership</p>
+    </footer>
   </div>
 </body>
 </html>

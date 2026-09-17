@@ -1,5 +1,5 @@
 ---
-title: "Release cadidates branches strategy"
+title: "A Release Candidate Branching Strategy"
 date: 2026-04-08T10:00:00+02:00
 lastmod: 2026-04-08T10:00:00+02:00
 
@@ -8,10 +8,10 @@ tags: ["git", "release candidate", "branch", "strategy"]
 categories: ["programming"]
 
 # SEO & social
-description: "Advantages and hhow to apply a RC branches strategy."
+description: "Why release candidate branches can make validation more predictable and protect the main development flow."
 
 # Display
-author: "Javi"
+author: "Javier Blesa"
 cover:
   image: "images/cover.jpg"
   alt: "Cover description"
