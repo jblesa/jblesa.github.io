@@ -49,12 +49,22 @@ a:hover {
   border-bottom: 1px solid var(--line);
 }
 
-.avatar {
+.avatar-frame {
   width: 96px;
   height: 96px;
   flex: 0 0 auto;
   border-radius: 50%;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transform: scale(2.55);
+  transform-origin: 45% 25%;
 }
 
 .profile h1 {
@@ -228,7 +238,7 @@ footer {
     align-items: flex-start;
   }
 
-  .avatar {
+  .avatar-frame {
     width: 76px;
     height: 76px;
   }
@@ -262,7 +272,7 @@ footer {
     gap: 18px;
   }
 
-  .avatar {
+  .avatar-frame {
     width: 64px;
     height: 64px;
   }
